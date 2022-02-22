@@ -5,10 +5,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+  <h1 align="center">PagluechBot</h1>
   <a href="https://github.com/Quakumei/PagluechBot">
-    <img align="right" src="src/main/resources/pagluech.png" alt="Logo" width="220" height="220">
+    <img src="src/main/resources/pagluech.png" alt="Logo" width="250" height="250">
   </a>
-<h3 align="center">PagluechBot</h3>
+
+  
   </p>
 </div>
 
@@ -19,13 +21,11 @@
 
 PagluechBot is a discord bot to test Discord API and everything I can imagine. Created for fun. Made with JDA.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
 
 * [JDA](https://github.com/DV8FromTheWorld/JDA)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
