@@ -6,7 +6,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Quakumei/PagluechBot">
-    <img align="right" src="src/main/resources/pagluech.JPG" alt="Logo" width="200" height="200" style="border-radius:50%;">
+    <img align="right" src="src/main/resources/pagluech.png" alt="Logo" width="220" height="220">
   </a>
 <h3 align="center">PagluechBot</h3>
   </p>
