@@ -44,10 +44,10 @@ PagluechBot is a discord bot to test Discord API and everything I can imagine. C
 ## Usage
 
 - !ping
-> Write "Pong!" in chat.
+> Write "Pong!" in chat. (sendMessage)
 
 - !info
-> Write basic info about bot.
+> Write basic info about bot. (sendMessageEmbeds)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -56,7 +56,7 @@ PagluechBot is a discord bot to test Discord API and everything I can imagine. C
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Info with image
+- [x] Info with image
 - [ ] Return member's avatar
 - [ ] Play music from youtube
 
