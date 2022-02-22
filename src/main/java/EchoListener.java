@@ -22,7 +22,7 @@ public class EchoListener extends ListenerAdapter {
             MessageChannel channel = event.getChannel();
             GuildChannel gchannel = event.getGuildChannel();
             Member member = event.getMember();
-            if (guild.getSelfMember().hasPermission(gchannel, (Permission.MESSAGE_SEND, Permission.VIEW_CHANNEL) ) {
+            if (guild.getSelfMember().hasPermission(gchannel, Permission.MESSAGE_ATTACH_FILES )) {
                 String avatarUrl = member.AVATAR_URL;
                 channel.sendMessage(avatarUrl).queue();
             } else {
