@@ -5,8 +5,13 @@ import net.dv8tion.jda.api.entities.*;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.requests.restaction.MessageAction;
+import net.dv8tion.jda.api.utils.AttachmentOption;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.net.URL;
+import java.util.Locale;
 
 public class EchoListener extends ListenerAdapter {
     @Override
@@ -43,6 +48,28 @@ public class EchoListener extends ListenerAdapter {
             Guild guild = event.getGuild();
             Member member = event.getMember();
 //            VoiceChannel myChannel = guild.getVoiceChannelById();
+        }
+        
+        if (content.split(" ")[0].equals("!show")) {
+            TextChannel tc = event.getTextChannel();
+            try{
+                URL url = new URL(content.split(" ")[1]);
+                BufferedImage img = ImageIO.read(url);
+                String imgFormat = url.toString().replaceAll(".*\\.", "").toLowerCase(Locale.ROOT);
+                if (!imgFormat.equals("jpg") && !imgFormat.equals("png")){
+                    throw new Exception("wrong format (got: "+imgFormat+")");
+                }
+                File file = new File("temp."+imgFormat);
+                ImageIO.write(img, imgFormat, file);
+                tc.sendFile(file).append("Success! :)").queue();
+
+
+            } catch (Exception e) {
+
+                tc.sendMessage("Error while fetching image: ").append(e.toString()).queue();
+            }
+
+
         }
     }
 }
